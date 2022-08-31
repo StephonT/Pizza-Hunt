@@ -50,12 +50,14 @@ const pizzaController = {
         // using body to destructure the request
         Pizza.create(body)
         .then(dbPizzaData => res.json(dbPizzaData))
-        .catch(err => res.status(400).json(err));
+        .catch(err => res.json(err));
     },
 
     //PUT /api/pizzas/:id
     // update pizza by id
     updatePizza({ params, body }, res) {
+        console.log(params.id);
+        console.log(body);
         Pizza.findOneAndUpdate(
             { _id: params.id },
              body, 
@@ -67,7 +69,7 @@ const pizzaController = {
             }
             res.json(dbPizzaData);
           })
-          .catch(err => res.status(400).json(err));
+          .catch(err => res.json(err));
       },
 
     //DELETE /api/pizzas/:id
