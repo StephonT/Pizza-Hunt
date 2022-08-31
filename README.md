@@ -17,6 +17,8 @@
 
   ## Usage
   This application will allow users to create their favorite type of pizza to be posted to the main page. From there other users can comment to an individual pizza post and reply to other users comments to make a thread.
+  <br>
+  Please review deployed live Heroku <a href="https://fast-sierra-37446.herokuapp.com/">URL</a>
 
   ## License
   This project is license under MIT
